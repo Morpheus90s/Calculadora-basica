@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --body-color: rgba(3, 8, 66, 0.774);
+    --text-white:rgb(250, 248, 248);
+    --span-color: rgb(#0c2835);
+    --active-color: rgba(82, 216, 4, 0.986);
+    --C-color: rgb(255, 7, 201);
+    --igual-color: rgb(17, 0, 255);
+    --border-color: rgba(255, 238, 0, 0.685);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--body-color);
+}
+
+.title{
+    width: auto;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    padding-top: 1%;
+    text-align: center;
+}
+
+.title h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+.calculadora{
+    position: relative;
+    display: grid;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-left: 3%; 
+}
+
+.calculadora .value{
+    grid-column: span 4;
+    height: 100px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.calculadora span{
+    display: grid;
+    width: 60px;
+    height: 60px;
+    color: var(--text-white);
+    background: var(--span-color);
+    place-content: center;
+    border: 1px solid rgba(39, 19, 19, 0.3);
+    border-radius: 10px;
+}
+
+.calculadora span:active{
+    background: var(--active-color);
+    color: var(--text-white);
+}
+
+.calculadora span.limp{
+    grid-column: span 2;
+    width: 120px;
+    background: var(--C-color);
+}
+
+.calculadora span.mais{
+    grid-row: span 2;
+    height: 120px;
+}
+
+.calculadora span.igual{
+    background: var(--igual-color);
+}
